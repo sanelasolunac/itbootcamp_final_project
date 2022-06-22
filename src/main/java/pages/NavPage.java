@@ -24,10 +24,10 @@ public class NavPage {
         return this.driver.findElement(By.className("btnAdmin"));
     }
     public WebElement getCitiesButton(){
-        return this.driver.findElement(By.id("list-item-214"));
+        return this.driver.findElement(By.xpath("//a[contains(@class, 'btnAdminCities')]"));
     }
     public WebElement getUsersButton (){
-        return this.driver.findElement(By.id("list-item-217"));
+        return this.driver.findElement(By.xpath("//a[contains(@class, 'btnAdminUsers')]"));
     }
     public WebElement getLogOutButton(){
         return this.driver.findElement(By.xpath("//button[contains(@class, 'btnLogout')]"));
@@ -51,7 +51,9 @@ public class NavPage {
         return this.driver.findElement(By.xpath("//a[contains(@class, 'btnLogin')]"));
     }
     public WebElement getSignUpButton(){
-        return this.driver.findElement(By.xpath(""));
+        return this.driver.findElement(By.xpath("//div[contains(@class, 'v-toolbar__items')]/a[4]"));
     }
-// NISI URADILA OVO JER TE JE BUNILO PREKO CEGA DA POVUCES LOKATORE
+    public WebElement getHeader (){
+        return this.driver.findElement(By.tagName("h1"));
+    }
 }
