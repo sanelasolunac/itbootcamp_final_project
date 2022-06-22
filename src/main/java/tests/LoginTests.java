@@ -19,11 +19,13 @@ public class LoginTests extends BasicTest{
 //    Verifikovati da se u url-u stranice javlja ruta /login
 
     @Test (priority = 1)
-    public void visitLoginPage(){
+    public void visitLoginPage() throws InterruptedException {
         this.driver.get(baseUrl);
         navPage.getLanguageButton().click();
         navPage.getLanguageENButton().click();
         navPage.getLoginButton().click();
+
+        Thread.sleep(1000);
 
         Assert.assertEquals(this.driver.getCurrentUrl(),
                 baseUrl + "/login",
@@ -102,7 +104,7 @@ public class LoginTests extends BasicTest{
                 "[ERROR] This URL does not have /login.");
     }
     @Test (priority = 5)
-    public void logIn (){
+    public void logIn () throws InterruptedException {
 //        Podaci:
 //        email: admin@admin.com
 //        password: 12345
@@ -117,9 +119,15 @@ public class LoginTests extends BasicTest{
         loginPage.getPasswordInput().sendKeys("12345");
         loginPage.getSubmitLoginButton().click();
 
+
+        Thread.sleep(1500);
+
         Assert.assertEquals(this.driver.getCurrentUrl(),
                 baseUrl + "/home",
                 "[ERROR] This URL does not have /home.");
+
+//        Assert.assertTrue(this.driver.getCurrentUrl().contains("/home"),
+//                "[ERROR] This URL does not have /home.");
     }
     @Test (priority = 6)
     public void logOut (){
@@ -132,7 +140,7 @@ public class LoginTests extends BasicTest{
         Assert.assertTrue(navPage.getLogOutButton().isDisplayed(),
                 "[ERROR] The element does not exists.");
 
-        navPage.getLoginButton().click();
+        navPage.getLogOutButton().click();
 
     }
 
