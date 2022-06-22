@@ -1,9 +1,9 @@
 package tests;
 
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.*;
 
@@ -24,8 +24,16 @@ public abstract class BasicTest {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         this.driver = new ChromeDriver();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().window().maximize();
+
+        navPage = new NavPage(driver);
+        loginPage = new LoginPage(driver);
+        signupPage = new SignupPage(driver);
+        citiesPage = new CitiesPage(driver);
+        messagePopUpPage = new MessagePopUpPage(driver);
+
     }
     @BeforeMethod
     public void beforeMethod(){
