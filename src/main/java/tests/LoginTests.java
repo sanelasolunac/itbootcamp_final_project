@@ -62,8 +62,7 @@ public class LoginTests extends BasicTest{
         loginPage.getPasswordInput().sendKeys("password123");
         loginPage.getSubmitLoginButton().click();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@role, 'status')]")));
+        messagePopUpPage.waitForPopUpToBeVisible();
 
         Assert.assertEquals(this.driver.findElement(By.xpath("//div[contains(@role, 'status')]/ul/li")).getText(),
                 "User does not exists",
@@ -92,8 +91,7 @@ public class LoginTests extends BasicTest{
         loginPage.getPasswordInput().sendKeys("password123");
         loginPage.getSubmitLoginButton().click();
 
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'error')]")));
+        messagePopUpPage.waitForErrorPopUpToBeVisible();
 
         Assert.assertEquals(this.driver.findElement(By.xpath("//div[contains(@role, 'status')]/ul/li")).getText(),
                 "Wrong password",
@@ -134,8 +132,6 @@ public class LoginTests extends BasicTest{
 //        Koraci:
 //        Verifikovati da je dugme logout vidljivo na stranici
 //        Kliknuti na logout dugme
-
-
 
         Assert.assertTrue(navPage.getLogOutButton().isDisplayed(),
                 "[ERROR] The element does not exists.");
