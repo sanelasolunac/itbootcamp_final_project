@@ -79,7 +79,7 @@ public class AdminCitiesTests extends BasicTest{
 
         citiesPage.getNewItemButton().click();
         citiesPage.waitForNewEditItemBoxToBeVisible();
-        citiesPage.getNewItemInput().sendKeys("Odlepicu");
+        citiesPage.getNewItemInput().sendKeys("Graz");
         citiesPage.getSaveButton().click();
         citiesPage.waitForSuccessfullyPopUpToBeVisible();
 
@@ -111,7 +111,7 @@ public class AdminCitiesTests extends BasicTest{
         navPage.getAdminButton().click();
         navPage.getCitiesButton().click();
 
-        citiesPage.getInputSearchButton().sendKeys("Odlepicu");
+        citiesPage.getInputSearchButton().sendKeys("Graz");
         citiesPage.waitForNumbersOfRowsToBe(1);
         citiesPage.getEditButtonFromRow(1).click();
         citiesPage.getNewItemInput().click();
@@ -126,7 +126,7 @@ public class AdminCitiesTests extends BasicTest{
 
 
         citiesPage.getNewItemInput().sendKeys("");
-        citiesPage.getNewItemInput().sendKeys("Odlepicu1");
+        citiesPage.getNewItemInput().sendKeys("Bec");
         citiesPage.getSaveButton().click();
 
 
@@ -154,12 +154,12 @@ public class AdminCitiesTests extends BasicTest{
         navPage.getAdminButton().click();
         navPage.getCitiesButton().click();
 
-        citiesPage.getInputSearchButton().sendKeys("Odlepicu1");
+        citiesPage.getInputSearchButton().sendKeys("Bec");
         citiesPage.waitForNumbersOfRowsToBe(1);
 
         Thread.sleep(1500);
 
-        Assert.assertTrue(citiesPage.getTableCell(1,2).getText().contains("Odlepicu1"),
+        Assert.assertTrue(citiesPage.getTableCell(1,2).getText().contains("Bec"),
                 "[ERROR] The names do not match.");
     }
     @Test (priority = 6)
@@ -181,10 +181,10 @@ public class AdminCitiesTests extends BasicTest{
         navPage.getAdminButton().click();
         navPage.getCitiesButton().click();
 
-        citiesPage.getInputSearchButton().sendKeys("Odlepicu1");
+        citiesPage.getInputSearchButton().sendKeys("Bec");
         citiesPage.waitForNumbersOfRowsToBe(1);
 
-        Assert.assertTrue(citiesPage.getTableCell(1,2).getText().contains("Odlepicu1"),
+        Assert.assertTrue(citiesPage.getTableCell(1,2).getText().contains("Bec"),
                 "[ERROR] The names do not match.");
 
         citiesPage.getDeleteButtonFromRow(1).click();
