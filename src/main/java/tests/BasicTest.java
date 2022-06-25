@@ -33,7 +33,6 @@ public abstract class BasicTest {
         signupPage = new SignupPage(driver);
         citiesPage = new CitiesPage(driver);
         messagePopUpPage = new MessagePopUpPage(driver);
-
     }
     @BeforeMethod
     public void beforeMethod(){
@@ -43,6 +42,5 @@ public abstract class BasicTest {
     public void afterClass(){
         this.driver.quit();
     }
-
 
 }
