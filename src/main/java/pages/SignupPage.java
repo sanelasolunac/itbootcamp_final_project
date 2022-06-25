@@ -28,4 +28,5 @@ public class SignupPage {
     public WebElement getCloseButton(){
         return this.driver.findElement(By.xpath("//div[contains(@class, 'v-card__actions')]/button"));
     }
+
 }
