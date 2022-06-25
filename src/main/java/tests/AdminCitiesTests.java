@@ -8,15 +8,6 @@ import org.testng.annotations.Test;
 public class AdminCitiesTests extends BasicTest{
     @Test(priority = 1)
     public void visitsTheAdminCitiesPageAndListCities() throws InterruptedException {
-//        Podaci:
-//        admin email: admin@admin.com
-//        admin password: 12345
-//        Koraci:
-//        Klik na sign up dugme iz navigacije
-//        Prijaviti se na sistem admin kredencijalima
-//        Klik na admin dugme iz navigacije
-//        Klik na Cities dugme iz padajuceg Admin menija
-//        Verifikovati da se u url-u stranice javlja /admin/cities ruta
 
         navPage.getLoginButton().click();
 
@@ -37,12 +28,6 @@ public class AdminCitiesTests extends BasicTest{
     }
     @Test(priority = 2)
     public void checksInputTypesForCreateEditNewCity() throws InterruptedException {
-        //    Koraci:
-//    Klik na admin dugme iz navigacije
-//    Klik na Cities dugme iz padajuceg Admin menija
-//    Kliknuti na New Item dugme
-//    Sacekati da se dijalog za kreiranje i editovanje grada pojavi
-//    Verifikovati da polje za unos grada za atribut type ima tekst text
 
 
         navPage.getAdminButton().click();
@@ -60,19 +45,7 @@ public class AdminCitiesTests extends BasicTest{
     }
     @Test (priority = 3)
     public void createNewCity() throws InterruptedException {
-//        Podaci:
-//        city: [Ime i prezime polaznika]’s city
-//        Koraci:
-//
-//
-//        Klik na admin dugme iz navigacije
-//        Klik na Cities dugme iz padajuceg Admin menija
-//        Kliknuti na New Item dugme
-//        Sacekati da se dijalog za kreiranje i editovanje grada pojavi
-//        Uneti ime grada u polje
-//        Kliknuti na Save dugme
-//        Sacekati da popu za prikaz poruke bude vidljiv
-//        Verifikovati da poruka sadrzi tekst Saved successfully
+
 
         navPage.getAdminButton().click();
         navPage.getCitiesButton().click();
@@ -94,19 +67,6 @@ public class AdminCitiesTests extends BasicTest{
 
     @Test(priority = 4)
     public void editCity() throws InterruptedException {
-//        Podaci:
-//        old city name: [Ime i prezime polaznika]’s city
-//        new city name: [Ime i prezime polaznika]’s city Edited
-//        Koraci:
-//        Klik na admin dugme iz navigacije
-//        Klik na Cities dugme iz padajuceg Admin menija
-//        U polje za pretragu uneti staro ime grada
-//        Sacekati da broj redova u tabeli bude 1
-//        Kliknuti na dugme Edit iz prvog reda
-//        Uneti novo ime za grad
-//        Kliknuti na dugme Save
-//        Sacekati da popu za prikaz poruke bude vidljiv
-//        Verifikovati da poruka sadrzi tekst Saved successfully
 
         navPage.getAdminButton().click();
         navPage.getCitiesButton().click();
@@ -140,17 +100,6 @@ public class AdminCitiesTests extends BasicTest{
     @Test(priority = 5)
     public void searchCity() throws InterruptedException {
 
-
-//    Podaci:
-//    city name: [Ime i prezime polaznika]’s city Edited
-//    Koraci:
-//    Klik na admin dugme iz navigacije
-//    Klik na Cities dugme iz padajuceg Admin menija
-//    U polje za pretragu uneti staro ime grada
-//    Sacekati da broj redova u tabeli bude 1
-//    Verifikovati da se u Name koloni prvog reda nalazi tekst iz pretrage
-
-
         navPage.getAdminButton().click();
         navPage.getCitiesButton().click();
 
@@ -164,19 +113,6 @@ public class AdminCitiesTests extends BasicTest{
     }
     @Test (priority = 6)
     public void  deleteCity (){
-//        Podaci:
-//        city name: [Ime i prezime polaznika]’s city Edited
-//        Koraci:
-//        Klik na admin dugme iz navigacije
-//        Klik na Cities dugme iz padajuceg Admin menija
-//        U polje za pretragu uneti staro ime grada
-//        Sacekati da broj redova u tabeli bude 1
-//        Verifikovati da se u Name koloni prvog reda nalazi tekst iz pretrage
-//        Kliknuti na dugme Delete iz prvog reda
-//        Sacekati da se dijalog za brisanje pojavi
-//        Kliknuti na dugme Delete iz dijaloga
-//        Sacekati da popu za prikaz poruke bude vidljiv
-//        Verifikovati da poruka sadrzi tekst Deleted successfully
 
         navPage.getAdminButton().click();
         navPage.getCitiesButton().click();
