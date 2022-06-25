@@ -6,10 +6,7 @@ import org.testng.annotations.Test;
 public class AuthRoutesTests extends BasicTest{
     @Test (priority = 1)
     public void forbidsVisitsToHomeUrlIfNotAuthenticated(){
-//        Koraci:
-//        Ucitati /home stranu
-//        Verifikovati da se u url-u stranice javlja ruta /login
-
+git
         this.driver.get(baseUrl + "/home");
 
         Assert.assertTrue(this.driver.getCurrentUrl().contains("/login"),

@@ -12,9 +12,6 @@ import java.time.Duration;
 public class SignUpTests extends BasicTest{
     @Test(priority = 1)
     public void visitsTheSignupPage(){
-//        Koraci:
-//        Klik na sign up dugme iz navigacije
-//        Verifikovati da se u url-u stranice javlja /signup ruta
 
         navPage.getSignUpButton().click();
 
@@ -24,11 +21,6 @@ public class SignUpTests extends BasicTest{
     }
     @Test(priority = 2)
     public void checksInputTypes() throws InterruptedException {
-//        Koraci:
-//        Klik na sign up dugme iz navigacije
-//        Verifikovati da polje za unos emaila za atribut type ima vrednost email
-//        Verifikovati da polje za unos lozinke za atribut type ima vrednost password
-//        Verifikovati da polje za unos lozinke za potvrdu za atribut type ima vrednost password
 
         navPage.getSignUpButton().click();
 
@@ -46,21 +38,6 @@ public class SignUpTests extends BasicTest{
     }
     @Test (priority = 3)
     public void displaysErrorsWhenUserAlreadyExists (){
-//        Podaci:
-//        name: Another User
-//        email: admin@admin.com
-//        password: 12345
-//        confirm password: 12345
-//        Koraci:
-//        Klik na sign up dugme iz navigacije
-//        Verifikovati da se u url-u stranice javlja /signup ruta
-//        Popuniti formu za registraciju podacima
-//        Klik na sign up dugme
-//        Sacekati da popu za prikaz poruke bude vidljiv
-//        Verifikovati da greska sadrzi poruku E-mail already exists
-//        Verifikovati da se u url-u stranice javlja /signup ruta
-
-
         navPage.getSignUpButton().click();
 
         Assert.assertEquals(this.driver.getCurrentUrl(),
@@ -87,19 +64,6 @@ public class SignUpTests extends BasicTest{
     }
     @Test(priority = 4)
     public void signUp() throws InterruptedException {
-//        Podaci:
-//        name: Ime i prezime polaznika
-//        email template: ime.prezime@itbootcamp.rs
-//        password: 12345
-//        confirm password: 12345
-//        Koraci:
-//        Klik na sign up dugme iz navigacije
-//        Popuniti formu podacima za registraciju
-//        Klik na sign up dugme
-//        Ucitati stranicu /home
-//        Verifikovati da dijalog za obavestenje sadrzi tekst IMPORTANT: Verify your account
-//        Kliknuti na Close dugme iz dijaloga
-//        Kliknuti na logout
 
         navPage.getSignUpButton().click();
 
