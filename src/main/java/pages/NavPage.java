@@ -10,7 +10,6 @@ public class NavPage {
     public NavPage(WebDriver driver) {
         this.driver = driver;
     }
-
     public WebElement getHomeLink (){
         return this.driver.findElement(By.xpath("//div[contains(@class, 'v-toolbar__items')]/a"));
     }
