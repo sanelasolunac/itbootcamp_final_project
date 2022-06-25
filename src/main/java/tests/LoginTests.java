@@ -11,13 +11,6 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class LoginTests extends BasicTest{
-
-//    Test #1: Visits the login page
-//    Koraci:
-//    Postaviti EN jezik stranice
-//    Klik na login dugme iz navigacije
-//    Verifikovati da se u url-u stranice javlja ruta /login
-
     @Test (priority = 1)
     public void visitLoginPage() throws InterruptedException {
         this.driver.get(baseUrl);
@@ -46,15 +39,6 @@ public class LoginTests extends BasicTest{
     }
     @Test(priority = 3)
     public void displayErrorsWhenUserDoesNotExist (){
-//        email: non-existing-user@gmal.com
-//        password: password123
-//        Koraci:
-//        Klik na login dugme iz navigacije
-//        Popuniti login formu podacima za logovanje
-//        Klik na login dugme
-//        Sacekati da popu za prikaz greske bude vidljiv
-//        Verifikovati da greska sadrzi poruku User does not exists
-//        Verifikovati da se u url-u stranice javlja /login ruta
 
         navPage.getLoginButton().click();
 
@@ -74,16 +58,6 @@ public class LoginTests extends BasicTest{
     }
     @Test(priority = 4)
     public void displayErrorsWhenPasswordIsWrong (){
-//        Podaci:
-//        email: admin@admin.com
-//        password: password123
-//        Koraci:
-//        Klik na login dugme iz navigacije
-//        Popuniti login formu podacima za logovanje
-//        Klik na login dugme
-//        Sacekati da popu za prikaz poruke bude vidljiv
-//        Verifikovati da greska sadrzi poruku Wrong password
-//        Verifikovati da se u url-u stranice javlja /login ruta
 
         navPage.getLoginButton().click();
 
@@ -103,13 +77,6 @@ public class LoginTests extends BasicTest{
     }
     @Test (priority = 5)
     public void logIn () throws InterruptedException {
-//        Podaci:
-//        email: admin@admin.com
-//        password: 12345
-//        Koraci:
-//        Klik na login dugme iz navigacije
-//        Popuniti login formu podacima za logovanje
-//        Verifikovati da se u url-u stranice javlja /home ruta
 
         navPage.getLoginButton().click();
 
@@ -123,16 +90,9 @@ public class LoginTests extends BasicTest{
         Assert.assertEquals(this.driver.getCurrentUrl(),
                 baseUrl + "/home",
                 "[ERROR] This URL does not have /home.");
-
-//        Assert.assertTrue(this.driver.getCurrentUrl().contains("/home"),
-//                "[ERROR] This URL does not have /home.");
     }
     @Test (priority = 6)
     public void logOut (){
-//        Koraci:
-//        Verifikovati da je dugme logout vidljivo na stranici
-//        Kliknuti na logout dugme
-
         Assert.assertTrue(navPage.getLogOutButton().isDisplayed(),
                 "[ERROR] The element does not exists.");
 
