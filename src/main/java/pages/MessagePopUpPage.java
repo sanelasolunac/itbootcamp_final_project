@@ -35,7 +35,6 @@ public class MessagePopUpPage {
                 .xpath("//div[contains(@class, 'v-snack')]/div[contains(@class, 'success')]")));
 
     }
-
     public WebElement getElementsWithVisibleMessagesForCities(){
         return driver.findElement(By.xpath("//div[contains(@class, 'v-snack')]/div[contains(@class, 'success')]"));
     }
