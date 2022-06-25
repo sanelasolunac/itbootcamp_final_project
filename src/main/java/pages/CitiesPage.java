@@ -29,13 +29,6 @@ public class CitiesPage {
     public WebElement getNewItemInput(){
         return this.driver.findElement(By.xpath("// input [@id= 'name']"));
     }
-//    metodu koja ceka da se dijalog za editovanje i kreiranje pojavi
-//    VALJDA JE TO SAMO OVA JEDNA A NE DVE
-
-//    metodu koja ceka da se dijalog za brisanje pojavi
-//    save dugme iz dijalog za editovanje i kreiranje
-//    delete dugme iz dijaloga za brisanje
-
 
     public void waitForDeleteBoxToBeVisible(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -51,9 +44,6 @@ public class CitiesPage {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),' Saved successfully ')]")));
     }
-//    metodu koja ceka da se u tabeli pojavi odredjeni broj redova. Metoda kao parametar prima broj redova.
-//    Ako se metoda pozove sa parametrom 5, to znaci da metoda ceka da se u tabeli pojavi 5 redova.
-
     public void waitForNumbersOfRowsToBe (int rowIndex) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.numberOfElementsToBe(By.tagName("tr"), rowIndex +1 ));
