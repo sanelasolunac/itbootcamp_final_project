@@ -12,7 +12,6 @@ public class LocaleTests extends BasicTest{
 
         Assert.assertTrue(navPage.getHeader().getText().contains("Página de aterrizaje"),
                 "[ERROR] The header does not contain 'Página de aterrizaje'.");
-
     }
     @Test (priority = 2)
     public void setLocaleToEN(){
@@ -21,7 +20,6 @@ public class LocaleTests extends BasicTest{
 
         Assert.assertTrue(navPage.getHeader().getText().contains("Landing"),
                 "[ERROR] The header does not contain 'Landing'.");
-
     }
     @Test (priority = 3)
     public void setLocaleToCN(){
@@ -30,7 +28,6 @@ public class LocaleTests extends BasicTest{
 
         Assert.assertTrue(navPage.getHeader().getText().contains("首页"),
                 "[ERROR] The header does not contain '首页'.");
-
     }
     @Test (priority = 4)
     public void setLocaleToFR(){
@@ -39,6 +36,5 @@ public class LocaleTests extends BasicTest{
 
         Assert.assertTrue(navPage.getHeader().getText().contains("Page d'atterrissage"),
                 "[ERROR] The header does not contain 'Page d'atterrissage'.");
-
     }
 }
